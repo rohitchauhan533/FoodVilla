@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM, { createRoot } from "react-dom/client";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Body from "./components/Body"
 
-function App() {
+/**
+     Header
+        - Logo(Title)
+        - Nav Items(Right Side)
+        - Cart
+     Body 
+        - Search bar
+        - RestrauntList
+          - RestaurantCard (many cards)
+              - Image
+              - Name
+              - Rating
+              - Cusines
+     Footer
+      - links
+      - Copyright
+    
+    */
+
+//Config Driven UI
+
+
+
+// const RestrauntCard = ({
+//   name,
+//   cuisines,
+//   cloudinaryImageId,
+//   lastMileTravelString,
+// }) => {
+//   return (
+//     <div className="card">
+//       <img
+//         src={
+//           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+
+//           cloudinaryImageId
+//            }
+//       />
+//       <h2>{name}</h2>
+//       <h3>{cuisines.join(", ")}</h3>
+//       <h4>{lastMileTravelString} minutes</h4>
+//     </div>
+//   );
+// };
+
+
+
+// no key (not acceptable)<<<<<<<<<<< index key(last option) <<<<< unquie key (best practice)
+
+
+const AppLayout = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
   );
-}
+};
 
-export default App;
+export default AppLayout;
