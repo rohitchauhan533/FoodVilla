@@ -23,9 +23,13 @@ const Body = () => {
 
     const filteredData = (searchText, restraurants) => {
         const result = restraurants.filter((restraurant)=>{return restraurant?.data?.name?.toLowerCase()?.includes(searchText?.toLowerCase())});
-        console.log(result, "restrrrr");
         return result;
     }
+
+    // when search is not found in restraurant
+    if(restraurantFilter?.length === 0)
+      return <h1>no match found</h1>
+    
 
     return restraurantData.length<=0 ? (<Shimmer />)
     :(
