@@ -27,8 +27,8 @@ const Body = () => {
     }
 
     // when search is not found in restraurant
-    if(restraurantFilter?.length === 0)
-      return <h1>no match found</h1>
+    //  if(restraurantFilter?.length === 0)
+    //    return <h1>no match found</h1>
     
 
     return restraurantData.length<=0 ? (<Shimmer />)

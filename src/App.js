@@ -3,6 +3,12 @@ import ReactDOM, { createRoot } from "react-dom/client";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Body from "./components/Body"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Error from "./components/Error"
+
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 
 /**
      Header
@@ -57,10 +63,17 @@ const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </>
   );
 };
 
+
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(<RouterProvider router={appRouter}/>);
+
 export default AppLayout;
+
